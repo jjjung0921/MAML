@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs / temp
+*.log
+tmp/
+.cache/
+
+# Agent-local settings (공유 대상 아님)
+.claude/settings.local.json
+
+# 손글씨 사진 원본 — 전사(exercise 파일)만 커밋한다 (Rule 10)
+exercises/_inbox/*
+!exercises/_inbox/.gitkeep
+
+# Sandbox: 실험 도구에 맞게 초기화 시 추가한다 (예: __pycache__/, .venv/, .ipynb_checkpoints/, *.pyc)
