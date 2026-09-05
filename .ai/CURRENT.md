@@ -6,31 +6,31 @@
 
 ## Current Unit
 
-U1. MAML 학습 프로젝트 초기화
+U2. FOMAML 사전 지식과 선수 배경 진단
 
 ## Status
 
-IN_PROGRESS
+TODO
 
 ## Progress
 
-- [x] 목표·기한·하루 120분 확인
-- [x] 목표·학습자·다섯 개념·자료 목록·Phase 계획 작성
-- [ ] 문서 정합성·작업 커밋·종료 검사 ←
-- [ ] U2 진단으로 인계
+- [x] U1 초기화 문서·개념 DAG·기준·자료·계획 작성 (commit 8d4181c)
+- [x] 문서 정합성 검사
+- [ ] U2 Rubric 작성·기준/운영값 검토·응답 전사 확인·진단
 
 ## Last Checkpoint
 
-`34f9cb7`
+`8d4181c`
 
 ## Relevant Documents
 
-- `curriculum/phases/01-orientation/PLAN.md`, `LEARNING_GOALS.md`, `LEARNER.md`, `concepts/CONCEPT_MAP.md`
+- `curriculum/phases/01-orientation/PLAN.md`, `LEARNING_GOALS.md`, `LEARNER.md`
+- `concepts/first-order-approximation.md`, `concepts/meta-gradient.md`
 
 ## Recent Important Changes
 
-- 2026-09-05 이틀 MAML 독해 계획과 DR-0006 작성; concept 5개 모두 unseen.
+- 2026-09-05 U1 완료: 이틀·하루 120분 계획, 개념 5개 모두 unseen, DR-0006.
 
 ## Next Action
 
-문서 정합성 검사 후 작업 커밋과 U2 인계를 완료한다.
+`scripts/study-start.sh 30` 후 U2에서 FOMAML 자기보고를 진단한다. 기준·기본 운영값을 표시하고 Problem+Rubric을 먼저 작성하며, 전사 확인 전 채점하지 않는다.
