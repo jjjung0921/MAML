@@ -3,7 +3,7 @@
 ## Time Budget
 
 - 집중 일정: 2026-09-05~09-06, 하루 120분(학습자 직접 확인).
-- Default session: 30분, 하루 4개 블록. 25분 진행 + 마지막 5분 기록을 기본으로 한다.
+- Default session: 최대 30분. 한 세션은 현재 unit을 마치고 새 unit 하나까지 진행하며 마지막 5분은 기록한다. 이번 단축 일정은 대개 unit 10~15분 + 기록 5분이다.
 - Typical week: 이번 이틀만 확정. 이후 주간 예산은 미정.
 - Velocity: scripts/study-start.sh가 LOG의 planned·actual로 계산한다. 초기화 소요는 학습 속도 추정에 사용하지 않는다.
 

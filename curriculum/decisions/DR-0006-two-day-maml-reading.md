@@ -22,7 +22,7 @@
 - 2번 선택. G1 과제/목적함수, G2 exact/FOMAML 미분 경로, G3 연구 독해로 구성한다.
 - 기존 MAML 분석을 보조 자료로 재사용하고 MAML 원문과 ANIL 발췌 후보를 등록한다. 자료 접근 확인은 U3다.
 - subject 폴더 MAML을 유지한다. 연결된 하나의 concept map을 가지며 이번에 이름 변경은 필요하지 않다.
-- 다음 U2부터 unit 200분 + 하루 4블록의 기록 40분 = 240분. 초기화 자체의 추정 20분은 튜터 작업이다.
+- 다음 U2부터 unit 160분 + 15개 unit의 기록 75분 + 중간 재개 기록 5분 = 240분. unit마다 짧은 세션으로 진행해 새 unit 하나와 마지막 5분 기록 규칙을 지킨다. 초기화 자체의 추정 20분은 튜터 작업이다.
 - 템플릿 default_budget 30·복습 및 판정 기본값 유지. 하루 120분은 직접 확인, 세부 기본값은 기존 제안을 유지한 운영 가정으로 LEARNER와 HANDOFF에 공개한다.
 - ROADMAP에 REVIEW를 추가한다: 학습·capstone 통과 후 날짜별 검증만 남은 Phase는 REVIEW로 보존하고 다음 Phase를 시작할 수 있다. 동시에 IN_PROGRESS인 Phase는 하나, 공식 DONE은 여전히 verified를 요구한다.
 - 이틀 내 핵심 학습·capstone 초회 통과를 목표로 한다. 공식 Phase DONE·verified에 필요한 서로 다른 날 증거가 부족하면 REVIEW로 남기고 후속 평가를 한다. Rule 8을 완화하지 않는다.
