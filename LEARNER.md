@@ -1,39 +1,31 @@
 # Learner
 
-<!--
-학습자의 고정 파라미터. 튜터가 세션을 구성할 때 참조하고, Parameters는 스크립트가 읽는다.
-자주 바뀌는 것(오늘 컨디션·오늘 예산)은 여기가 아니라 .ai/INBOX.md에 적는다. 초기화 시 채운다.
--->
-
 ## Time Budget
 
-- Default session: `default_budget`분 · 최소 세션: `min_session`분 (회상 질문 1개)
-- Typical week: <요일별 예산 또는 "평일 20–30분, 주말 60분">
-- Velocity: 손으로 적지 않는다 — `scripts/study-start.sh`가 `.ai/LOG.md`의 planned·actual에서 계산한다
+- 집중 일정: 2026-09-05~09-06, 하루 120분(학습자 직접 확인).
+- Default session: 30분, 하루 4개 블록. 25분 진행 + 마지막 5분 기록을 기본으로 한다.
+- Typical week: 이번 이틀만 확정. 이후 주간 예산은 미정.
+- Velocity: scripts/study-start.sh가 LOG의 planned·actual로 계산한다. 초기화 소요는 학습 속도 추정에 사용하지 않는다.
 
 ## Background
 
-- <이미 아는 분야·수준, 쓰는 언어·도구, 학습 방식의 특징>
+- 사전 지식 발언: “FOMAML이 Hessian의 계산 복잡도로 인해 선호되었다는 점”. 진단 전 자기보고다.
+- 기존 evidence에는 MAML 원문 분석·수식 해설이 있다. 읽기 완료·선수 수학 숙련도·코딩 경험은 미확인이다.
 
 ## Input Preferences
 
-<!-- Rule 10. 학습자는 LaTeX를 치지 않는다. 우선순위대로 적는다. -->
-
-- 수식: <손글씨 사진 / ASCII 수식 / 코드(sympy·numpy) / 말로 설명 — 우선순위>
-- 사진 위치: `exercises/_inbox/` (gitignore. 튜터가 전사한 뒤 `전사 확인: OK`를 받는다)
-- 설명: <한국어 / 영어 병기 여부>
-- 피하고 싶은 유형: <예: 긴 증명 타이핑>
+- 수식: 손글씨 사진 또는 ASCII → 말로 설명 → 필요한 경우 코드. 세부 우선순위는 운영 가정이다.
+- 사진 위치: exercises/_inbox/. 튜터 전사 후 학습자의 `전사 확인: OK`를 받아 채점한다.
+- 설명: 한국어, 원문의 영어 용어 병기. 큰 틀에서 시작해 한 번에 하나의 의존 관계를 설명한다.
+- 긴 LaTeX·증명 타이핑을 요구하지 않는다.
 
 ## Grading Preferences
 
-<!-- Rule 9의 기본값은 strict(부분=미통과, 애매하면 낮은 쪽)다. 바꾸려면 DR을 남긴다. -->
-
-- Default grader: <주로 쓰는 Agent 이름 — 예: claude-code>
-- 피드백 형식: <항목별 판정만 / 오답에 대한 힌트 포함>
+- Default grader: study-grader. Rubric·확인된 Attempt만 전달하고 실행 Agent 이름을 grader에 기록한다. 역할이 없으면 codex가 규칙대로 판정한다.
+- 필수 기준별 ✓/✗와 Attempt 인용, 오답에는 다음 시도를 위한 짧은 힌트. partial은 미통과.
+- 서로 다른 날 2회 pass, 그중 transfer·derivation·proof·coding 1회 이상을 유지한다.
 
 ## Parameters
-
-<!-- 스크립트와 규칙이 읽는 값. `- key: value` 형식과 key 이름을 바꾸지 않는다. review_intervals는 공백 구분(일). -->
 
 - default_budget: 30
 - min_session: 5
@@ -43,3 +35,8 @@
 - verified_passes: 2
 - review_intervals: 3 7 21 60
 - context_warn_kb: 25
+
+## Parameter Basis
+
+- 하루 120분은 직접 확인. 2회 통과·3/7/21/60일 복습·한국어/손글씨/ASCII는 직전 제안 이후 변경 요청 없이 유지했다.
+- default_budget 등 나머지는 템플릿 기본값을 보존한 운영 가정이다. 학습자가 모든 숫자를 개별 확인했다고 간주하지 않는다; U2 시작 시 표시하고 필요 시 조정한다.

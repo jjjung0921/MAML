@@ -1,69 +1,59 @@
 # Phase 01 — orientation
 
-<!-- 템플릿에 포함된 첫 Phase다. 초기화(.ai/BOOTSTRAP.md) 시 주제에 맞게 Scope·Units를 조정한다. -->
-
-- Status: PLANNED
-- Start: <YYYY-MM-DD> · End: <YYYY-MM-DD>
-- Goals: 전체 (목표 확정 자체가 이 Phase의 결과)
+- Status: IN_PROGRESS
+- Start: 2026-09-05 · End: 미완료
+- Goals: G1–G3의 목표·증명 방법·학습 환경 확정
 
 ## Goal
 
-템플릿이 실제 학습 프로젝트가 되어, 목표마다 증명 방법이 있고, 개념 지도·근거 목록·학습자 파라미터가 갖춰지고, 어떤 튜터든 `scripts/study-start.sh`로 오늘 할 unit을 고를 수 있는 상태.
+MAML 연구 독해 목표, 학습자 예산, 다섯 개념의 선행 관계·검증 기준, 근거 목록을 갖추고 진단 후 첫 학습 unit을 시작할 수 있다.
 
 ## Motivation
 
-이후 모든 Phase가 같은 규칙·기준·속도 데이터 위에서 진행되려면 그 기반이 먼저 있어야 한다. 이 Phase가 끝나기 전에는 개념 학습을 시작하지 않는다 — 단, 진단 exercise(U2)는 예외다.
+기존 분석 자료와 실제 이해 상태를 구분하고, 이틀 240분을 학습자의 배경에 맞게 사용한다.
 
 ## Scope
 
-- 템플릿 placeholder를 주제 내용으로 교체 (`AGENTS.md`, `README.md`, `LEARNING_GOALS.md`, `LEARNER.md`)
-- 개념 목록과 선행 관계(`concepts/`, `CONCEPT_MAP.md`), 근거 자료 목록(`evidence/INDEX.md`)
-- Prior Knowledge 진단 — 근거 없이 state를 올리지 않는다
-- 전체 계획을 Phase·unit으로 나누고 `ROADMAP.md`에 등록
-- 스크립트와 파라미터가 이 저장소에서 동작하는지 확인
+- 초기화 문서·개념 기준·자료 목록·Phase 계획.
+- FOMAML 자기보고 진단과 기본 미분·연쇄법칙 배경 확인.
+- 자료 접근·필요 evidence 카드 생성, 시작·종료 스크립트와 세부 파라미터 확인.
 
 ## Out of Scope
 
-- 새 개념의 학습·설명 (Phase 02부터)
-- 자료 전체 읽기 (접근 확인과 목록만; 읽기는 해당 unit에서)
-- sandbox 환경의 세부 구성 (첫 coding exercise 전에 별도 unit으로)
+- 새 개념의 본 학습과 학습자의 Definition/Attempt 대필.
+- 전체 구현·벤치마크 재현·자료 전체 읽기.
 
 ## Dependencies
 
-- 학습자가 제공하는 주제 설명 (`.ai/BOOTSTRAP.md`의 Topic Description)
-- 목표·범위·시간 예산에 대한 학습자 확인
+- 학습자 응답: MAML 계열 연구 독해, 이틀 완료, 하루 120분.
+- 기존 MAML 분석 자료, 템플릿 기본 파라미터.
 
 ## Units
 
-<!-- 완료 시 [x]로 바꾸고 근거를 끝에 적는다: (commit abc1234) -->
+- [ ] U1. MAML 학습 프로젝트 초기화 — setup · est 20m · requires — · Done when: 목표/Proof·개념 DAG·기준·자료 목록·시간 계획 작성, 초기화 안내 제거, 작업 커밋·종료 검사 완료
+- [ ] U2. FOMAML 사전 지식과 선수 배경 진단 — practice · est 10m · requires U1 · Done when: first-order-approximation C1/C2/C4 중심의 low-cost diagnostic과 필요시 meta-gradient 선수 질문의 Rubric·확인된 Attempt·판정 기록, 기준과 파라미터 검토; 실패 시 HANDOFF에 보완 범위
+- [ ] U3. 원문 접근 및 evidence 카드 확보 — setup · est 10m · requires U1 · Done when: MAML/ANIL 원문 접근 확인, Phase 02 개념별 절·식 포인터가 있는 evidence 카드 생성 및 concept 포인터 연결; ANIL 발췌 위치 선정
+- [ ] U4. 운영 점검과 첫 학습 계획 확정 — setup · est 10m · requires U2,U3 · Done when: 스크립트 FAIL 없음, 진단을 반영한 Phase 02 PLAN·시간 예산 확인, CURRENT가 02 U1을 가리킴
 
-- [ ] U1. `.ai/BOOTSTRAP.md` 수행 — setup · est 40m · requires — · Done when: BOOTSTRAP의 Output Checklist 전부 충족
-- [ ] U2. Prior Knowledge 진단 — practice · est 20m · requires U1 · Done when: `LEARNING_GOALS.md` Prior Knowledge의 개념마다 low-cost exercise 기록이 있고, 통과한 것만 practiced/verified로 표시됨
-- [ ] U3. 근거 자료 확보 — learn · est 20m · requires U1 · Done when: `evidence/INDEX.md`의 자료가 접근 가능하고(파일·링크), Phase 02 Scope 개념의 evidence 파일이 있음 (status unread 허용)
-- [ ] U4. 스크립트·파라미터 확인 — setup · est 10m · requires U1 · Done when: `scripts/study-start.sh 20`이 복습·준비된 unit·remaining을 출력하고 `scripts/study-end.sh`가 FAIL 없이 통과
-- [ ] U5. Phase 02 PLAN 확정 — setup · est 15m · requires U2,U3,U4 · Done when: `ROADMAP.md`에 등록되고 `.ai/CURRENT.md`가 Phase 02 U1을 가리킴
+U1은 이번 튜터 초기화 작업이다. 다음 U2부터 orientation 잔여 30분을 이틀 학습 예산에 포함한다. 원문의 진술·공식과 학습자 진단의 pass는 서로 다른 근거다. 진단 pass 한 번은 practiced까지만 가능하다.
 
 ## Relevant Documents
 
-- `LEARNING_GOALS.md`, `LEARNER.md` — 전체 (작성 대상)
-- `concepts/_template.md`, `evidence/_template.md`, `exercises/README.md`
-- `curriculum/decisions/_template.md`
-- `.ai/BOOTSTRAP.md`
+- LEARNING_GOALS.md, LEARNER.md, concepts/CONCEPT_MAP.md 및 각 concept의 Verification Criteria.
+- evidence/INDEX.md, exercises/README.md, curriculum/decisions/DR-0006-two-day-maml-reading.md.
 
 ## Acceptance Criteria
 
-- [ ] AC1. `AGENTS.md`, `README.md`, `LEARNING_GOALS.md`, `LEARNER.md`에 placeholder(`<...>`)와 작성 지침 주석이 남아 있지 않다
-- [ ] AC2. `LEARNING_GOALS.md`의 목표마다 Proof와 Phase가 있고, 모든 `concepts/*.md`에 `state`·`requires`가 있으며 `CONCEPT_MAP.md`와 일치한다
-- [ ] AC3. 진단 결과가 `exercises/`에 있고 practiced/verified 개념은 `verified_by`가 그 파일을 가리킨다 — `scripts/study-end.sh`가 FAIL 없이 통과
-- [ ] AC4. `evidence/INDEX.md`의 모든 자료에 유형·위치(경로 또는 링크)·관련 개념이 있고 접근이 확인되었다
-- [ ] AC5. `ROADMAP.md`의 Phase마다 Est가 있고 `scripts/study-start.sh`가 remaining과 projection을 출력한다
-- [ ] AC6. `.ai/BOOTSTRAP.md`가 삭제되었고 남은 참조가 없다
-- [ ] AC7. `LEARNER.md`의 Parameters가 학습자와 합의된 값이고, Input Preferences에 수식 입력 경로가 적혀 있다
+- [ ] AC1. AGENTS·README·목표·학습자 문서의 placeholder/작성 지침 제거, 초기화 안내 파일 및 참조 제거.
+- [ ] AC2. 목표별 Proof·Phase, concept별 requires·기준, 동일한 DAG와 Reading Order, ROADMAP Est와 상세 unit 시간 합계 일치.
+- [ ] AC3. U2의 확인된 Attempt·진단 결과 존재; 이해 상태는 exercise가 뒷받침하는 범위만 반영.
+- [ ] AC4. U3에서 원문 접근·Phase 02 evidence 포인터·Phase 03 독해 발췌 위치 확인.
+- [ ] AC5. 예산·파라미터의 직접 확인값과 기본 운영 가정 구분; U2/U4에서 기준과 운영값 검토.
+- [ ] AC6. 시작 스크립트가 준비된 unit과 remaining을 출력하고 종료 검사 FAIL 없음; CURRENT가 Phase 02 U1로 이동.
 
 ## Validation Plan
 
-- AC1: `grep -n "<" AGENTS.md README.md LEARNING_GOALS.md LEARNER.md`의 출력에 placeholder·주석이 없는지 눈으로 확인
-- AC2·AC3: `scripts/study-end.sh` 실행 (state–근거 일치 검사 포함), `CONCEPT_MAP.md`의 화살표와 각 concept의 `requires` 대조
-- AC4: 자료마다 파일을 열거나 링크에 접근해 첫 페이지를 확인
-- AC5: `scripts/study-start.sh 20` 출력의 remaining·projection 줄 확인
-- AC6·AC7: 해당 파일의 존재·내용 확인
+- U1: placeholder·참조 검색, DAG 위상 정렬·requires 대조, Est 합계, Definition 공란·unseen·빈 verified_by 확인.
+- U2: self-exam 절차로 Problem+Rubric 작성 → 학습자 응답 전사 확인 → 분리된 study-grader 판정. 초기화에서는 exercise를 출제·채점하지 않는다.
+- U3: 원문 해당 페이지를 직접 열고 자료 카드의 절·식 포인터와 대조한다.
+- U4: scripts/study-start.sh 20과 scripts/study-end.sh --set-checkpoint; 검사 통과 후 close commit.
