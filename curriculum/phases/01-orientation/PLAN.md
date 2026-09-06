@@ -31,7 +31,7 @@ MAML 연구 독해 목표, 학습자 예산, 다섯 개념의 선행 관계·검
 ## Units
 
 - [x] U1. MAML 학습 프로젝트 초기화 — setup · est 20m · requires — · Done when: 목표/Proof·개념 DAG·기준·자료 목록·시간 계획 작성, 초기화 안내 제거, 작업 커밋·종료 검사 완료 (commit 8d4181c)
-- [ ] U2. FOMAML 사전 지식과 선수 배경 진단 — practice · est 10m · requires U1 · Done when: first-order-approximation C1/C2/C4 중심의 low-cost diagnostic과 필요시 meta-gradient 선수 질문의 Rubric·확인된 Attempt·판정 기록, 기준과 파라미터 검토; 실패 시 HANDOFF에 보완 범위
+- [x] U2. FOMAML 사전 지식과 선수 배경 진단 — practice · est 10m · requires U1 · Done when: first-order-approximation C1/C2/C4 중심의 low-cost diagnostic과 필요시 meta-gradient 선수 질문의 Rubric·확인된 Attempt·판정 기록, 기준과 파라미터 검토; 실패 시 HANDOFF에 보완 범위
 - [ ] U3. 원문 접근 및 evidence 카드 확보 — setup · est 10m · requires U1 · Done when: MAML/ANIL 원문 접근 확인, Phase 02 개념별 절·식 포인터가 있는 evidence 카드 생성 및 concept 포인터 연결; ANIL 발췌 위치 선정
 - [ ] U4. 운영 점검과 첫 학습 계획 확정 — setup · est 10m · requires U2,U3 · Done when: 스크립트 FAIL 없음, 진단을 반영한 Phase 02 PLAN·시간 예산 확인, CURRENT가 02 U1을 가리킴
 
@@ -46,9 +46,9 @@ U1은 이번 튜터 초기화 작업이다. 다음 U2부터 orientation 잔여 3
 
 - [x] AC1. AGENTS·README·목표·학습자 문서의 placeholder/작성 지침 제거, 초기화 안내 파일 및 참조 제거.
 - [x] AC2. 목표별 Proof·Phase, concept별 requires·기준, 동일한 DAG와 Reading Order, ROADMAP Est와 상세 unit 시간 합계 일치.
-- [ ] AC3. U2의 확인된 Attempt·진단 결과 존재; 이해 상태는 exercise가 뒷받침하는 범위만 반영.
+- [x] AC3. U2의 확인된 Attempt·진단 결과 존재; 이해 상태는 exercise가 뒷받침하는 범위만 반영.
 - [ ] AC4. U3에서 원문 접근·Phase 02 evidence 포인터·Phase 03 독해 발췌 위치 확인.
-- [ ] AC5. 예산·파라미터의 직접 확인값과 기본 운영 가정 구분; U2/U4에서 기준과 운영값 검토.
+- [x] AC5. 예산·파라미터의 직접 확인값과 기본 운영 가정 구분; U2/U4에서 기준과 운영값 검토.
 - [ ] AC6. 시작 스크립트가 준비된 unit과 remaining을 출력하고 종료 검사 FAIL 없음; CURRENT가 Phase 02 U1로 이동.
 
 ## Validation Plan

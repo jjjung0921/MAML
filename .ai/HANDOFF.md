@@ -1,48 +1,49 @@
 # Handoff
 
-- From: codex
-- Date: 2026-09-05
-- Phase / Unit: 01-orientation / U1 완료 → U2
+- From: claude-code
+- Date: 2026-09-06
+- Phase / Unit: 01-orientation / U2 완료, U3 미착수
 
 ## Goal
 
-MAML 개념을 익히고 후속 연구의 변경점·가정을 읽어내는 기반을 이틀·하루 120분에 학습한다.
+MAML 개념을 익히고 후속 연구의 변경점·가정을 읽어내는 기반을 갖춘다. 이틀 프레임은 유지하되 잔여는 이월한다(DR-0007).
 
 ## Work Completed
 
-- 초기화 문서·G1~G3 Proof·다섯 개념 DAG/기준·자료 목록·Phase 02 상세 PLAN·DR-0006 작성. 작업 커밋 8d4181c.
-- Definition·Claims 공란, 모든 state unseen, DAG·시간·활성 placeholder/참조 검사 통과. 종료 검사는 LOG 참조.
-- 기존 AGENTS 사용자 추가 규칙, raw 분석, .claude 안내 보존. 초기화 절차 파일 삭제; 역사적 DR의 과거 언급 유지.
+- U2 완료. FOMAML 진단(C1/C2/C4) fail, meta-gradient 선수 배경(연쇄법칙) pass(DR-0010 기준 재채점). 두 exercise 모두 전사 확인·분리 채점·항목별 인용 기록.
+- 오개념 후보 2건 active 등록. 기준·파라미터 검토로 DR-0007(이월)·DR-0008(복습 3·7일)·DR-0009(당일 1회 pass)·DR-0010(원리 기준 판정)을 작성하고 LEARNER.md·AGENTS.md Rule 8·9에 반영.
 
 ## Work In Progress
 
-- 없음. 다음 학습은 U2 진단이며 이번 초기화에서는 exercise를 출제·채점하지 않았다.
+- 없음. U3는 미착수 상태다.
 
 ## Decisions Made
 
-- G1 과제/목적함수, G2 exact/FOMAML, G3 새 연구 발췌 독해. 구현·벤치마크·RL 상세 제외.
-- 다음 U2부터 unit 160분 + 기록·재개 80분. verified/DONE은 날짜별 증거를 충족해야 하며 부족하면 REVIEW로 이월.
+- 이틀 프레임 유지 + 잔여 이월(날짜 미정). 목표·검증 기준은 축소하지 않는다.
+- review_intervals 3·7로 종료. verified_passes 1, 날짜 분리 요건 제거(그 pass는 transfer/derivation/proof/coding 중 하나여야 한다는 조건은 보존).
+- 채점은 원리 확인 기준. 계산 미완료·산술 실수는 원리가 보이면 ✓, 사실은 판정문에 남긴다.
 
 ## Exercises Graded
 
-- 없음. FOMAML 발언은 LEARNING_GOALS의 Prior Knowledge에 원문 그대로 보존했다.
+- `exercises/2026-09-05-first-order-approximation-recall.md` — fail (R1~R4 전부 ✗).
+- `exercises/2026-09-06-meta-gradient-chain-rule-prereq.md` — pass (1차 partial → DR-0010 적용 재채점, R1~R4 ✓). state 는 unseen 유지: 순수 미적분 선수 진단이라 introduced 를 거치지 않는다.
 
 ## Misconceptions Observed
 
-- 없음. FOMAML의 “선호”와 HVP/dense Hessian 구분은 진단할 항목이며 선판정하지 않았다.
+- 2차 미분이 inner update 단계에서 발생한다는 서술 (active).
+- Hessian 전체 구성 없이 계산하는 경로를 모른다고 밝힘 — HVP 부재 (active).
 
 ## Open Questions
 
-- U2: FOMAML 이해·미분 배경, 개념 C1~C4와 기본 운영값 검토. U3: 원문 접근·evidence 카드·ANIL 발췌 확보.
-- Phase 03 진입 전 상세 PLAN 작성. 미verified 개념은 자동 복습 만기 목록에 없으므로 별도로 날짜별 증거 공백을 추적한다.
+- U3: MAML 원문 접근 가능 여부, Phase 02 evidence 카드의 절·식 포인터, ANIL 발췌 위치.
+- Phase 03 진입 전 상세 PLAN. 이월 기간이 길어지면 verified 개념의 3일 복습 만기가 새 unit보다 먼저 도래한다.
 
 ## Unverified Assumptions
 
-- 이틀은 09-05~09-06 KST, 하루 120분 내 unit별 짧은 세션으로 운영. 1일차 meta-gradient 도입을 나눠 잇는 배치는 해석이다.
-- 입력 우선순위와 세부 세션 파라미터는 기존 제안/템플릿 기본값 유지; 전 수치를 개별 승인받은 것은 아니다.
-- Est는 선수 배경·자료 접근·초회 pass를 가정한다. 진단/재시도에 따라 기간 조정이 필요할 수 있다.
-- ANIL 발췌 한 편으로 연구 독해의 출발점을 평가하며 모든 미래 연구의 이해를 보장하지 않는다.
+- 진단 fail은 계산 경로 미학습을 뜻하며 미분 배경 부족을 뜻하지 않는다 — 연쇄법칙 pass가 근거지만 1차원 스칼라 사례 하나에 기반한다.
+- 연쇄법칙 복습 unit을 두지 않는 판단은 위 근거에 의존한다. Phase 02 첫 유도에서 막히면 재검토한다.
+- Phase 02 130분 추정은 진단 결과 반영 전 값이다. U4에서 확인한다.
 
 ## Exact Next Action
 
-`scripts/study-start.sh 30` → Phase 01 U2와 first-order-approximation 기준 확인 → Problem+Rubric → 학습자 답 전사 확인 → 분리된 grader 판정. U3/U4는 그 뒤 수행한다.
+U3을 시작한다: MAML 원문 접근 확인 → Phase 02 개념별 절·식 포인터가 있는 evidence 카드 생성 → concept의 evidence 포인터 연결 → ANIL 발췌 위치 선정. 그 뒤 U4에서 Phase 02 PLAN·예산을 확정한다.

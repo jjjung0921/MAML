@@ -23,7 +23,8 @@
 
 - Default grader: study-grader. Rubric·확인된 Attempt만 전달하고 실행 Agent 이름을 grader에 기록한다. 역할이 없으면 codex가 규칙대로 판정한다.
 - 필수 기준별 ✓/✗와 Attempt 인용, 오답에는 다음 시도를 위한 짧은 힌트. partial은 미통과.
-- 서로 다른 날 2회 pass, 그중 transfer·derivation·proof·coding 1회 이상을 유지한다.
+- 원리 이해가 확인되면 계산 미완료·산술 실수가 있어도 ✓ (DR-0010). 원리 미확인은 수치가 맞아도 ✗.
+- pass 1회로 verified (같은 날 허용, DR-0009). 그 pass는 transfer·derivation·proof·coding 중 하나여야 한다.
 
 ## Parameters
 
@@ -32,11 +33,12 @@
 - review_only_below: 15
 - review_est: 5
 - record_est: 5
-- verified_passes: 2
-- review_intervals: 3 7 21 60
+- verified_passes: 1 (같은 날 허용 — DR-0009)
+- review_intervals: 3 7 (stage 2 통과 후 review_due 비움 — DR-0008)
 - context_warn_kb: 25
 
 ## Parameter Basis
 
-- 하루 120분은 직접 확인. 2회 통과·3/7/21/60일 복습·한국어/손글씨/ASCII는 직전 제안 이후 변경 요청 없이 유지했다.
-- default_budget 등 나머지는 템플릿 기본값을 보존한 운영 가정이다. 학습자가 모든 숫자를 개별 확인했다고 간주하지 않는다; U2 시작 시 표시하고 필요 시 조정한다.
+- 하루 120분은 직접 확인. 한국어/손글씨/ASCII 입력도 직접 확인값이다.
+- 2026-09-06 U2 검토에서 학습자가 직접 확인: default_budget 30 · min_session 5 · review_only_below 15 · verified_passes 1(당일 1회 pass, DR-0009) · review_intervals 3 7(두 단계로 종료, DR-0008). 더 이상 운영 가정이 아니다.
+- 일정: 이틀 프레임(09-05~09-06)을 유지하고 소화하지 못한 unit은 날짜 미정으로 이월한다(DR-0007). 이후 주간 예산은 미정.
