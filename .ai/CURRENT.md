@@ -10,7 +10,7 @@ U3. 원문 접근 및 evidence 카드 확보 (미착수)
 
 ## Status
 
-READY
+TODO
 
 ## Progress
 
@@ -23,7 +23,7 @@ READY
 
 ## Last Checkpoint
 
-(이번 세션 종료 시 갱신)
+`2b46f48`
 
 ## Relevant Documents
 
