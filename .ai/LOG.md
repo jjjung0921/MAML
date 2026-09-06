@@ -1,5 +1,14 @@
 # Session Log
 
+## 2026-09-06 · claude-code · 01/U3 · planned 30m · actual 20m
+
+- Reviews: 만기 없음 (verified 개념 0).
+- Units: U3 완료 (est 10m · actual 15m). 원문 접근 확인에 폴더 접근 승인 필요했음.
+- Exercises / State changes: 없음. concept 4개의 evidence 포인터를 INDEX 앵커에서 카드 앵커로 교체; state는 5개 모두 unseen 유지.
+- Verification: MAML PDF를 직접 열어 §2.1·§2.2·식 (1)·Algorithm 1·§5.2·Table 1 위치를 카드 앵커와 대조. ANIL §4(p.6) 발췌 범위 확인. 두 파일 모두 로컬 PDF로 접근 가능.
+- Learner changes: study-grader 스킬 추가됨 — 다음 채점부터 이 스킬로 호출한다. INBOX 비어 있었음.
+- Needs your attention: U4로 Phase 01 종료. arXiv·MLR은 이 환경의 프록시에서 막혀 로컬 PDF가 유일한 원문 경로다.
+
 ## 2026-09-06 · claude-code · 01/U2 · planned 30m · actual 30m
 
 - Reviews: 만기 없음 (verified 개념 0).

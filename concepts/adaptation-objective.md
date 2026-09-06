@@ -3,7 +3,7 @@ name: adaptation-objective
 title: 적응과 적응 후 목적함수
 state: unseen
 requires: [task-episode]
-evidence: [evidence/INDEX.md#phase-02]
+evidence: [evidence/finn2017-maml.md#eq-adapt, evidence/finn2017-maml.md#eq-1]
 verified_by: []
 verified_on:
 review_stage: 0

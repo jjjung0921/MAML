@@ -3,7 +3,7 @@ name: task-episode
 title: 과제·support/query·meta-train/test
 state: unseen
 requires: []
-evidence: [evidence/INDEX.md#phase-02]
+evidence: [evidence/finn2017-maml.md, evidence/finn2017-maml.md#eq-adapt]
 verified_by: []
 verified_on:
 review_stage: 0

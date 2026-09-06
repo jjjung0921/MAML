@@ -2,7 +2,7 @@
 
 - From: claude-code
 - Date: 2026-09-06
-- Phase / Unit: 01-orientation / U2 완료, U3 미착수
+- Phase / Unit: 01-orientation / U3 완료, U4 미착수
 
 ## Goal
 
@@ -11,11 +11,12 @@ MAML 개념을 익히고 후속 연구의 변경점·가정을 읽어내는 기�
 ## Work Completed
 
 - U2 완료. FOMAML 진단(C1/C2/C4) fail, meta-gradient 선수 배경(연쇄법칙) pass(DR-0010 기준 재채점). 두 exercise 모두 전사 확인·분리 채점·항목별 인용 기록.
+- U3 완료. MAML·ANIL 로컬 PDF 접근 확인(폴더 접근 승인), evidence/finn2017-maml.md 카드에 원문 대조 앵커 4개(#eq-adapt·#eq-1·#gradient-through-gradient·#sec-5-2-first-order), concept 4개 포인터 연결, ANIL 발췌 §4(p.6) 선정.
 - 오개념 후보 2건 active 등록. 기준·파라미터 검토로 DR-0007(이월)·DR-0008(복습 3·7일)·DR-0009(당일 1회 pass)·DR-0010(원리 기준 판정)을 작성하고 LEARNER.md·AGENTS.md Rule 8·9에 반영.
 
 ## Work In Progress
 
-- 없음. U3는 미착수 상태다.
+- 없음. U4(운영 점검·Phase 02 PLAN 확정)만 남았고 그것으로 Phase 01이 끝난다.
 
 ## Decisions Made
 
@@ -35,7 +36,6 @@ MAML 개념을 익히고 후속 연구의 변경점·가정을 읽어내는 기�
 
 ## Open Questions
 
-- U3: MAML 원문 접근 가능 여부, Phase 02 evidence 카드의 절·식 포인터, ANIL 발췌 위치.
 - Phase 03 진입 전 상세 PLAN. 이월 기간이 길어지면 verified 개념의 3일 복습 만기가 새 unit보다 먼저 도래한다.
 
 ## Unverified Assumptions
@@ -46,4 +46,4 @@ MAML 개념을 익히고 후속 연구의 변경점·가정을 읽어내는 기�
 
 ## Exact Next Action
 
-U3을 시작한다: MAML 원문 접근 확인 → Phase 02 개념별 절·식 포인터가 있는 evidence 카드 생성 → concept의 evidence 포인터 연결 → ANIL 발췌 위치 선정. 그 뒤 U4에서 Phase 02 PLAN·예산을 확정한다.
+U4를 시작한다: scripts/study-start.sh 20 → study-end.sh FAIL 없음 확인 → 진단 결과를 반영해 Phase 02 PLAN·시간 예산 확정 → CURRENT를 02 U1로 이동 → Phase 01 RESULT.md·ROADMAP·phase/01 태그.

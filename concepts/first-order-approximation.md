@@ -3,7 +3,7 @@ name: first-order-approximation
 title: FOMAML의 근사와 계산 비용
 state: unseen
 requires: [meta-gradient]
-evidence: [evidence/INDEX.md#phase-02]
+evidence: [evidence/finn2017-maml.md#sec-5-2-first-order, evidence/finn2017-maml.md#gradient-through-gradient]
 verified_by: []
 verified_on:
 review_stage: 0

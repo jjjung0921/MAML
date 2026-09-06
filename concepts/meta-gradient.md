@@ -3,7 +3,7 @@ name: meta-gradient
 title: 적응 경로를 통과하는 meta-gradient
 state: unseen
 requires: [adaptation-objective]
-evidence: [evidence/INDEX.md#phase-02]
+evidence: [evidence/finn2017-maml.md#eq-1, evidence/finn2017-maml.md#gradient-through-gradient]
 verified_by: []
 verified_on:
 review_stage: 0
