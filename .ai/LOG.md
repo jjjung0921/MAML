@@ -1,5 +1,14 @@
 # Session Log
 
+## 2026-09-06 · claude-code · 01/U4 · planned 60m · actual 45m
+
+- Reviews: 만기 없음 (verified 개념 0).
+- Units: U4 완료 (est 10m · actual 15m). 추가 작업: 학습자 요청으로 notes/ 개념 설명 4편 작성 (약 30m, 계획 밖).
+- Exercises / State changes: 없음. 개념 5개 unseen 유지. Phase 01 DONE, Phase 02 IN_PROGRESS.
+- Verification: Phase 02 PLAN의 AC3·Validation을 DR-0008·0009·0010에 맞춰 갱신. RESULT의 Understanding State가 concepts frontmatter와 일치. 종료 검사 FAIL 없음.
+- Learner changes: "개념 설명 노트" 선택 → DR-0011로 notes/ 도입, 대필 경계(Definition·Claims는 학습자)와 재사용 금지 문항을 명시.
+- Needs your attention: Phase 02 U1부터는 학습자가 직접 Definition을 쓴다. notes/를 열어 놓고 쓰면 학습자 언어 판정이 흐려진다.
+
 ## 2026-09-06 · claude-code · 01/U3 · planned 30m · actual 20m
 
 - Reviews: 만기 없음 (verified 개념 0).

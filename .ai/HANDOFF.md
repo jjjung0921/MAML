@@ -2,7 +2,7 @@
 
 - From: claude-code
 - Date: 2026-09-06
-- Phase / Unit: 01-orientation / U3 완료, U4 미착수
+- Phase / Unit: 01-orientation DONE → 02-maml-core / U1 미착수
 
 ## Goal
 
@@ -11,12 +11,13 @@ MAML 개념을 익히고 후속 연구의 변경점·가정을 읽어내는 기�
 ## Work Completed
 
 - U2 완료. FOMAML 진단(C1/C2/C4) fail, meta-gradient 선수 배경(연쇄법칙) pass(DR-0010 기준 재채점). 두 exercise 모두 전사 확인·분리 채점·항목별 인용 기록.
+- U4 완료로 Phase 01 DONE(RESULT.md, tag phase/01). Phase 02 PLAN을 진단·DR-0008~0010 반영해 갱신, notes/ 4편 작성(DR-0011).
 - U3 완료. MAML·ANIL 로컬 PDF 접근 확인(폴더 접근 승인), evidence/finn2017-maml.md 카드에 원문 대조 앵커 4개(#eq-adapt·#eq-1·#gradient-through-gradient·#sec-5-2-first-order), concept 4개 포인터 연결, ANIL 발췌 §4(p.6) 선정.
 - 오개념 후보 2건 active 등록. 기준·파라미터 검토로 DR-0007(이월)·DR-0008(복습 3·7일)·DR-0009(당일 1회 pass)·DR-0010(원리 기준 판정)을 작성하고 LEARNER.md·AGENTS.md Rule 8·9에 반영.
 
 ## Work In Progress
 
-- 없음. U4(운영 점검·Phase 02 PLAN 확정)만 남았고 그것으로 Phase 01이 끝난다.
+- 없음. Phase 01 종료, Phase 02 U1이 다음이다.
 
 ## Decisions Made
 
@@ -46,4 +47,4 @@ MAML 개념을 익히고 후속 연구의 변경점·가정을 읽어내는 기�
 
 ## Exact Next Action
 
-U4를 시작한다: scripts/study-start.sh 20 → study-end.sh FAIL 없음 확인 → 진단 결과를 반영해 Phase 02 PLAN·시간 예산 확정 → CURRENT를 02 U1로 이동 → Phase 01 RESULT.md·ROADMAP·phase/01 태그.
+Phase 02 U1을 시작한다: 학습자가 `notes/task-episode.md`를 읽고 `evidence/finn2017-maml.md`의 `#eq-adapt`·Algorithm 2로 원문 확인 → `concepts/task-episode.md`에 노트를 닫고 자기 언어 Definition과 출처 붙은 Claims 작성 → C1–C4 기준 검토. 튜터가 Definition을 대신 쓰지 않는다.

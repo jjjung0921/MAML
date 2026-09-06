@@ -63,4 +63,5 @@ DR-0010(원리 기준 판정) 적용 후 재검토: 판정 유지. R1~R4의 미�
 - State: unseen 유지. fail이므로 state 변경 없음(Rule 8).
 - Review: 설정하지 않음.
 - 관찰: 사전 자기보고("FOMAML이 Hessian의 계산 복잡도로 인해 선호되었다")는 비용 층위까지이며, 계산 경로(C1/C2) 구분은 미확인 상태로 확인됐다. 오개념 후보 2건을 MISCONCEPTIONS에 기록.
+- 재사용 금지: `notes/first-order-approximation.md`가 이 3문항의 답을 포함한다(DR-0011). 같은 문항으로 재시도하지 않고 변형·전이 문항으로 확인한다.
 - Next exercise: meta-gradient 선수 배경(합성함수 연쇄법칙) 진단 → Phase 02 진입 속도 결정. C3 수치 비교는 C1/C2 도입 이후로 미룬다.

@@ -13,7 +13,7 @@
 ## Repository Map
 
 - `LEARNING_GOALS.md` 목표와 증명 방법 · `LEARNER.md` 학습자 파라미터 · `curriculum/ROADMAP.md` Phase 목록 · `curriculum/phases/` Phase PLAN/RESULT · `curriculum/decisions/` DR(결정 기록)
-- `concepts/` 개념 — 이해 상태의 유일한 자리 · `concepts/CONCEPT_MAP.md` 선행 관계 · `concepts/MISCONCEPTIONS.md` 오개념 · `evidence/` 근거 자료 · `exercises/` 시도·채점 기록 · `sandbox/` 실험 코드 (source of truth 아님)
+- `concepts/` 개념 — 이해 상태의 유일한 자리 · `concepts/CONCEPT_MAP.md` 선행 관계 · `concepts/MISCONCEPTIONS.md` 오개념 · `evidence/` 근거 자료 · `exercises/` 시도·채점 기록 · `notes/` 튜터가 쓴 개념 설명 (이해 상태의 근거 아님, DR-0011) · `sandbox/` 실험 코드 (source of truth 아님)
 - 이 폴더 = subject 하나(`~/study/MAML/`, concept map 하나를 공유하는 단위, DR-0005). 같은 폴더의 `why--*.md` 같은 질문 원장은 스토리 측(`~/study/stories/`, 자체 AGENTS.md) 파일이며 concept state의 근거가 아니다 — 스토리의 개념이 목표와 이어지면 `concepts/`로 올린다. 다른 subject의 개념은 `requires`가 아니라 `evidence`로 그쪽 concept 파일을 가리키고, state는 그쪽이 기준이다
 - `.ai/CURRENT.md` 현재 상태·checkpoint · `.ai/HANDOFF.md` 세션 간 인수인계 · `.ai/LOG.md` 세션 기록(학습자 보고·속도 데이터) · `.ai/INBOX.md` 학습자 지시
 - `scripts/study-start.sh` 시작 절차 안내 · `scripts/study-end.sh` 종료 점검
