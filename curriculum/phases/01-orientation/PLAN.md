@@ -33,7 +33,7 @@ MAML 연구 독해 목표, 학습자 예산, 다섯 개념의 선행 관계·검
 - [x] U1. MAML 학습 프로젝트 초기화 — setup · est 20m · requires — · Done when: 목표/Proof·개념 DAG·기준·자료 목록·시간 계획 작성, 초기화 안내 제거, 작업 커밋·종료 검사 완료 (commit 8d4181c)
 - [x] U2. FOMAML 사전 지식과 선수 배경 진단 — practice · est 10m · requires U1 · Done when: first-order-approximation C1/C2/C4 중심의 low-cost diagnostic과 필요시 meta-gradient 선수 질문의 Rubric·확인된 Attempt·판정 기록, 기준과 파라미터 검토; 실패 시 HANDOFF에 보완 범위 (commit 2b46f48)
 - [x] U3. 원문 접근 및 evidence 카드 확보 — setup · est 10m · requires U1 · Done when: MAML/ANIL 원문 접근 확인, Phase 02 개념별 절·식 포인터가 있는 evidence 카드 생성 및 concept 포인터 연결; ANIL 발췌 위치 선정 (commit 090d553)
-- [x] U4. 운영 점검과 첫 학습 계획 확정 — setup · est 10m · requires U2,U3 · Done when: 스크립트 FAIL 없음, 진단을 반영한 Phase 02 PLAN·시간 예산 확인, CURRENT가 02 U1을 가리킴
+- [x] U4. 운영 점검과 첫 학습 계획 확정 — setup · est 10m · requires U2,U3 · Done when: 스크립트 FAIL 없음, 진단을 반영한 Phase 02 PLAN·시간 예산 확인, CURRENT가 02 U1을 가리킴  (commit 54c5611)
 
 U1은 이번 튜터 초기화 작업이다. 다음 U2부터 orientation 잔여 30분을 이틀 학습 예산에 포함한다. 원문의 진술·공식과 학습자 진단의 pass는 서로 다른 근거다. 진단 pass 한 번은 practiced까지만 가능하다.
 
