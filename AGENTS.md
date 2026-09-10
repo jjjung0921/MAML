@@ -44,6 +44,7 @@
 13. **Context budget** — 파일은 필요한 부분만 읽고 긴 출력은 요약해서 남긴다. 상한: CURRENT 40줄, HANDOFF 50줄, LOG 항목 8줄, Progress 10 step, concept 150줄(긴 유도는 `evidence/`·`sandbox/`로), exercise 100줄. 시작 컨텍스트가 25KB를 넘으면 줄인다.
 14. **Decay** — verified에도 `review_due`가 있다. 복습 pass면 `review_stage`를 올려 `LEARNER.md`의 `review_intervals` 다음 간격으로 미루고, fail이면 `stale`로 내린다(복습 pass 1회로 verified 복귀). 만기 항목은 새 unit보다 먼저다.
 15. **Decisions** — 커리큘럼·방법에 장기 영향이 있는 결정(Phase 추가·순서 변경·목표 수정·채점 정책 변경)은 `curriculum/decisions/`에 DR로 남긴다. `ROADMAP.md`는 현재 계획만 기술하고, 과거 계획과 이유는 DR에 둔다.
+16. **Notation** — 튜터가 저장소에 쓰는 수식은 LaTeX로 적는다: 인라인 `$...$`, 블록 `$$...$$`. 들여쓴 코드 블록·ASCII 수식(`∇_θ`, `L_{T_i}`)으로 쓰지 않는다. 기호는 `evidence/finn2017-maml/raw/equations.md`의 기호표를 따른다($\mathcal{T}$, $p(\mathcal{T})$, $f_\theta$, $\mathcal{L}_{\mathcal{T}_i}$, $\theta_i'$, $\alpha,\beta$). Rule 10은 그대로다 — 학습자는 LaTeX를 치지 않으며, 튜터가 Attempt로 전사할 때 LaTeX로 옮기고 `전사 확인: OK`를 받는다.
 
 ## Commands
 
