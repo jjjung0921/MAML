@@ -47,4 +47,4 @@ MAML 개념을 익히고 후속 연구의 변경점·가정을 읽어내는 기�
 
 ## Exact Next Action
 
-Phase 02 U1을 시작한다: 학습자가 `notes/task-episode.md`를 읽고 `evidence/finn2017-maml.md`의 `#eq-adapt`·Algorithm 2로 원문 확인 → `concepts/task-episode.md`에 노트를 닫고 자기 언어 Definition과 출처 붙은 Claims 작성 → C1–C4 기준 검토. 튜터가 Definition을 대신 쓰지 않는다.
+Phase 02 U1을 시작한다: 학습자가 `notes/task-episode.md`를 읽고 `evidence/finn2017-maml.md`의 `#eq-adapt`·Algorithm 2로 원문 확인 → 튜터가 `concepts/task-episode.md`에 Definition과 출처 붙은 Claims 초안을 ai:draft로 써 두고 학습자가 검토·수정(마킹 걷기, DR-0012) → C1–C4 기준 검토.

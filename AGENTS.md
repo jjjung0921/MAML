@@ -13,7 +13,7 @@
 ## Repository Map
 
 - `LEARNING_GOALS.md` 목표와 증명 방법 · `LEARNER.md` 학습자 파라미터 · `curriculum/ROADMAP.md` Phase 목록 · `curriculum/phases/` Phase PLAN/RESULT · `curriculum/decisions/` DR(결정 기록)
-- `concepts/` 개념 — 이해 상태의 유일한 자리 · `concepts/CONCEPT_MAP.md` 선행 관계 · `concepts/MISCONCEPTIONS.md` 오개념 · `evidence/` 근거 자료 · `exercises/` 시도·채점 기록 · `notes/` 튜터가 쓴 개념 설명 (이해 상태의 근거 아님, DR-0011) · `sandbox/` 실험 코드 (source of truth 아님)
+- `concepts/` 개념 — 이해 상태의 유일한 자리 · `concepts/CONCEPT_MAP.md` 선행 관계 · `concepts/MISCONCEPTIONS.md` 오개념 · `evidence/` 근거 자료 · `exercises/` 시도·채점 기록 · `notes/` 튜터가 쓴 개념 설명 (이해 상태의 근거 아님, DR-0011·DR-0012) · `sandbox/` 실험 코드 (source of truth 아님)
 - 이 폴더 = subject 하나(`~/study/MAML/`, concept map 하나를 공유하는 단위, DR-0005). 같은 폴더의 `why--*.md` 같은 질문 원장은 스토리 측(`~/study/stories/`, 자체 AGENTS.md) 파일이며 concept state의 근거가 아니다 — 스토리의 개념이 목표와 이어지면 `concepts/`로 올린다. 다른 subject의 개념은 `requires`가 아니라 `evidence`로 그쪽 concept 파일을 가리키고, state는 그쪽이 기준이다
 - `.ai/CURRENT.md` 현재 상태·checkpoint · `.ai/HANDOFF.md` 세션 간 인수인계 · `.ai/LOG.md` 세션 기록(학습자 보고·속도 데이터) · `.ai/INBOX.md` 학습자 지시
 - `scripts/study-start.sh` 시작 절차 안내 · `scripts/study-end.sh` 종료 점검
@@ -30,13 +30,13 @@
 ## Rules
 
 1. **Memory** — 저장소가 기억이다. 이해 상태·계획·오개념·결정은 파일과 커밋에 남기고, 대화 기억에 의존하지 않는다.
-2. **Truth** — 정보가 충돌하면 이 순서로 우선한다: ① 학습자의 직접 말(대화·`.ai/INBOX.md`) ② `exercises/`의 채점 기록 ③ `concepts/`의 state·Verification Criteria ④ `evidence/` ⑤ `LEARNING_GOALS.md`·`LEARNER.md` ⑥ 현재 Phase `PLAN.md` ⑦ `.ai/CURRENT.md` ⑧ `.ai/HANDOFF.md` ⑨ 과거 대화와 튜터의 인상. "이해한 것 같다"는 인상은 최하위다.
+2. **Truth** — 정보가 충돌하면 이 순서로 우선한다: ① 학습자의 직접 말(대화·`.ai/INBOX.md`) ② `exercises/`의 채점 기록 ③ `concepts/`의 state·Verification Criteria ④ `evidence/` ⑤ `LEARNING_GOALS.md`·`LEARNER.md` ⑥ 현재 Phase `PLAN.md` ⑦ `.ai/CURRENT.md` ⑧ `.ai/HANDOFF.md` ⑨ 과거 대화·튜터의 인상·검토 전 튜터 초안(`notes/`, `ai:draft` 마킹이 남은 concept 절). "이해한 것 같다"는 인상은 최하위다.
 3. **Loading** — 필요한 것만 읽는다: 이 파일 → `.ai/CURRENT.md` → `.ai/HANDOFF.md` → `scripts/study-start.sh` 출력 → 오늘 unit의 concept·evidence·exercise. 다른 concept·evidence·과거 Phase·LOG의 이전 항목·checkpoint 이전 커밋은 이유가 있을 때만 본다.
-4. **Learner changes** — `Agent:` trailer가 없는 커밋과 uncommitted 변경은 학습자 변경이다. 되돌리지 않는다. 학습자가 쓴 정의·주장이 틀려 보여도 고쳐 쓰지 않고 `concepts/MISCONCEPTIONS.md`에 후보로 적은 뒤 exercise로 확인한다 — 학습자의 문장 자체가 이해 상태의 데이터다.
+4. **Authorship / Learner changes** — 개념 서술은 튜터가 초안을 쓰고 학습자가 검토한다(DR-0012): `notes/<slug>.md`의 설명과 `concepts/<slug>.md`의 Definition·Claims·Verification Criteria 초안은 튜터가 쓰고 `<!-- ai:draft -->` … `<!-- /ai:draft -->` 마킹으로 감싼다. 학습자가 검토(직접 수정, 또는 INBOX `검토: OK <slug>`)하면 마킹을 걷는다. 핵심 유도와 출제된 exercise의 정답은 초안에 쓰지 않는다. `Agent:` trailer가 없는 커밋과 uncommitted 변경은 학습자 변경이다. 되돌리지 않는다. 학습자가 쓰거나 고친 정의·주장이 틀려 보여도 고쳐 쓰지 않고 `concepts/MISCONCEPTIONS.md`에 후보로 적은 뒤 exercise로 확인한다 — 학습자가 고친 문장 자체가 이해 상태의 데이터다.
 5. **Inbox** — `.ai/INBOX.md`의 항목(오늘 예산·컨디션·질문·사진 위치)은 학습자의 직접 지시다. 처리한 항목은 삭제하고 결과를 LOG에 적는다. 처리하지 못한 항목은 남기고 이유를 LOG에 적는다.
 6. **Scope** — 현재 Phase `PLAN.md`의 Scope와 오늘 고른 unit 안에서만 진행한다. 샛길 질문은 두 문장 이내로 답하고 HANDOFF의 Open Questions에 적는다. 요청받지 않은 커리큘럼 변경·개념 추가는 먼저 제안한다.
 7. **Evidence** — concept의 Claims 각 줄에 근거 라벨(`[fact]` 출처 명시 · `[derived]` 근거 기반 유도 · `[assumption]` 가정 · `[hypothesis]` 가설 · `[unsupported]` 근거 부족)과 `evidence/` 포인터(절·정리·식 번호)를 붙인다. 튜터의 기억만으로 공식·정리를 단언하지 않고, 확인하지 못한 주장은 `[unsupported]`로 남긴다.
-8. **State** — `concepts/` frontmatter의 `state`는 `exercises/` 기록으로만 바뀐다(`verified_by`가 가리키는 파일). introduced(학습자 언어의 Definition + Claims + Verification Criteria) → practiced(pass 또는 partial 1회) → verified(pass ≥ `verified_passes`, 그중 transfer·derivation·proof·coding ≥ 1 — 날짜 분리 요건 없음, DR-0009). 튜터의 설명과 같은 세션의 되풀이는 근거가 아니다.
+8. **State** — `concepts/` frontmatter의 `state`는 `exercises/` 기록으로만 바뀐다(`verified_by`가 가리키는 파일). introduced(튜터 초안을 학습자가 검토해 `ai:draft` 마킹이 걷힌 Definition + Claims + Verification Criteria — DR-0012) → practiced(pass 또는 partial 1회) → verified(pass ≥ `verified_passes`, 그중 transfer·derivation·proof·coding ≥ 1 — 날짜 분리 요건 없음, DR-0009). 튜터의 설명·초안 검토·이해 확인(Skills 표)과 같은 세션의 되풀이는 근거가 아니다.
 9. **Grading** — exercise 파일에 Rubric을 문제와 함께 먼저 쓴다(concept의 Verification Criteria에서 파생). 판정은 항목별 ✓/✗ + Attempt 인용이며 총평·칭찬은 쓰지 않는다. 판정 기준은 그 항목이 겨냥한 원리가 Attempt에서 확인되는가다 — 계산 미완료·산술 실수는 원리가 확인되면 ✓로 하고 판정문에 사실로 적는다; 원리가 확인되지 않으면 수치가 맞아도 ✗다 (DR-0010). partial은 미통과, 두 등급 사이면 낮은 쪽, `grader`를 기록한다.
 10. **Input** — 학습자는 LaTeX를 치지 않는다. 손글씨 사진(`exercises/_inbox/`)·ASCII 수식·코드·말로 푼 설명을 받아 튜터가 Attempt에 전사하고, 학습자의 `전사 확인: OK` 뒤에만 채점한다. 표기가 아니라 수학을 채점한다.
 11. **Budget** — 세션은 선언된 분(`study-start.sh 30` 또는 INBOX, 없으면 `LEARNER.md`의 `default_budget`) 안에서 끝낸다. 구성 순서: 복습 만기 → 진행 중 unit → 새 unit 하나 → 기록(마지막 5분). 예산이 `review_only_below` 미만이면 복습만. unit의 `est`·`actual`을 LOG에 적는다.
@@ -61,11 +61,11 @@
 | 상황 | 스킬 (있으면) |
 |---|---|
 | 목표를 "할 수 있다" 문장과 증명 방법으로 바꿀 때 | `problem-framing` |
-| 학습 조율 프레임 — 당위성(기존 방식 → 한계 → 새 방식)·L0→L2 점진 심화·개념 연결(`~/study/concept-links.md`) | `learning-coach` (이 워크스페이스의 Rules·Session Procedure와 충돌하면 이 파일이 우선) |
-| 개념 설명·질문 답변 — 한계→직관→정식화→경계→연결 5층, 핵심 유도는 힌트 사다리 | `concept-tutor` |
-| 학습자가 종료를 원할 때 자기 말 설명 검토 | `learning-coach`의 파인만 게이트 (학습자가 열자고 할 때만) |
+| 학습 조율 프레임 — 당위성(기존 방식 → 한계 → 새 방식)·L0→L2 점진 심화·개념 연결(`~/study/concept-links.md`)·개념 서술 초안·이해 확인 | `learning-coach` (이 워크스페이스의 Rules·Session Procedure와 충돌하면 이 파일이 우선) |
+| 개념 설명·질문 답변 — 한계→직관→정식화→경계→연결 5층(`notes/`에 기록), 핵심 유도만 힌트 사다리. 확인 질문은 학습자가 요청할 때만 | `concept-tutor` |
+| 학습자가 "내가 이해한 게 맞아?"라고 물을 때 | `learning-coach`의 이해 확인 — 한 번 검토(정확한 부분 → 어긋난 부분과 이유 → 교정된 이해)하고 끝낸다. 재질문하지 않으며 튜터가 먼저 요구하지 않는다. 어긋남은 `MISCONCEPTIONS.md` 후보와 다음 exercise 소재로 |
 | Phase·목표를 마친 뒤 복습용 블로그 글 | `blog-coauthor` (이월 스토리의 시리즈는 `study-series`) |
-| exercise 출제 | `self-exam` |
+| exercise 출제 (unit에 계획됐거나 학습자가 원할 때; 설명 뒤 자동 미니 체크는 없다) | `self-exam` |
 | exercise 채점 — Rubric과 `전사 확인: OK`가 갖춰진 뒤 | `study-grader` 에이전트 (튜터와 다른 컨텍스트에서 Rubric·Attempt만으로 판정. 호출 프롬프트에 설명·기대 정답을 넣지 않는다. 없으면 튜터가 Rule 9로 직접) |
 | 오개념을 원인 → 잘못된 가정 → 개념 갭으로 좁힐 때 | `debug-to-concept` |
 | 논문·자료를 evidence로 정리할 때 | `paper-analysis`, `research-claim-check` |
@@ -74,6 +74,7 @@
 ## Session Procedure
 
 - **시작**: `scripts/study-start.sh [분]`을 실행하고 출력의 next steps를 따른다 — Resume 판단 → 학습자 변경·INBOX 반영 → 복습 만기 → unit 선택(PLAN의 Units·Acceptance Criteria 확인) → CURRENT의 Status=IN_PROGRESS·Progress 작성과 HANDOFF 초안 → 진행.
+- **확인**: 이해 확인·확인 질문은 학습자가 요청할 때만 한다 — 종료 조건이 아니다. unit에 계획된 exercise는 그대로 진행한다.
 - **종료**: exercise 기록 완성(result ≠ pending) → concept의 state·review_due 갱신 → 작업 커밋과 PLAN의 unit SHA 갱신 → CURRENT(Status≠IN_PROGRESS)·HANDOFF·LOG(planned·actual) 갱신 → 필요 시 DR, Phase 완료 시 `RESULT.md`·`ROADMAP.md`·`phase/NN` 태그 → `scripts/study-end.sh --set-checkpoint` → close commit.
 
 ## Commit Format

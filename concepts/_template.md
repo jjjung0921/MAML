@@ -25,9 +25,11 @@ last_reviewed:
 
 ## Definition
 
-<!-- 학습자의 문장으로 쓴다. 튜터가 대신 쓰지 않는다 (Rule 4). 처음엔 틀려도 지우지 않고 Revisions에 남긴다. -->
+<!-- 튜터가 초안을 쓰고 ai:draft 마킹으로 감싼다 (Rule 4, DR-0012). 학습자가 검토(수정 또는 INBOX `검토: OK <slug>`)하면 마킹을 걷는다 — 그때 introduced. 마킹이 남은 절은 미검토다. 학습자가 고친 문장은 지우지 않고 Revisions에 남긴다. -->
 
+<!-- ai:draft -->
 <한 문단. "…는 …이다. …일 때 성립하고, …를 위해 쓴다.">
+<!-- /ai:draft -->
 
 ## Why It Matters
 
@@ -37,7 +39,7 @@ last_reviewed:
 
 ## Claims
 
-<!-- 이 개념에 대해 참이라고 믿는 진술. 각 줄에 근거 라벨과 evidence 포인터 (Rule 7).
+<!-- 이 개념에 대해 참이라고 믿는 진술. 초안은 튜터가 쓰고 ai:draft로 감싼다(검토 후 걷는다). 각 줄에 근거 라벨과 evidence 포인터 (Rule 7).
 [fact] 출처 명시 · [derived] 근거 기반 유도(sandbox·evidence의 derivation) · [assumption] 가정 · [hypothesis] 가설 · [unsupported] 근거 부족 -->
 
 - [fact] <진술> — `evidence/<slug>.md#<정리·식 번호>`
@@ -68,6 +70,6 @@ last_reviewed:
 
 ## Revisions
 
-<!-- Definition을 고친 이력. 이전 문장을 지우지 않는다. -->
+<!-- Definition을 고친 이력. 이전 문장을 지우지 않는다. 튜터 초안 → 학습자 수정도 여기에 남긴다. -->
 
 - <YYYY-MM-DD> "<이전 문장>" → "<수정>" — 근거: `exercises/<file>.md`

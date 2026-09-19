@@ -20,7 +20,7 @@ MAML 연구 독해 목표, 학습자 예산, 다섯 개념의 선행 관계·검
 
 ## Out of Scope
 
-- 새 개념의 본 학습과 학습자의 Definition/Attempt 대필.
+- 새 개념의 본 학습과 학습자 Attempt 대필 (Definition·Claims 초안은 DR-0012에 따라 튜터가 쓴다).
 - 전체 구현·벤치마크 재현·자료 전체 읽기.
 
 ## Dependencies

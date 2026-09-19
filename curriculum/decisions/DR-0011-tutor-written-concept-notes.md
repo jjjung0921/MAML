@@ -1,6 +1,6 @@
 # DR-0011: 튜터 작성 개념 설명 노트(notes/) 도입
 
-- Status: Accepted
+- Status: Accepted — Definition·Claims 저자 항목과 "노트를 보지 않고 쓴다" 절차는 Superseded by DR-0012 (notes/ 분리·근거 라벨·정답 미포함은 유효)
 - Date: 2026-09-06
 - Deciders: 학습자(직접 선택), claude-code(대필 경계 설정)
 
